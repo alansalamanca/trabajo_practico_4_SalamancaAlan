@@ -4,21 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>TP4</title>
-	<!--Import Google Icon Font-->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-	<!-- Compiled and minified CSS -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 	<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 </head>
 
 <body>
 	<div class="container">
-		<header>
-			<div data-th-replace="~{fragments/header::navbar}">
-				
+		<header class="header">
+			<div class="bg-dark">
+				<h1>Facultad de Ingenieria </h1>
 			</div>
-		</header>
-		
+			<section>
+				<div data-th-replace="~{fragments/header::navbar}">
+					
+				</div>
+			</section>
+		 </header>
 		<div class="row">
 		
 			<main class="col-9">
@@ -94,15 +94,25 @@
 				</div>
 			</main>
 			
-			<aside class="col-3">
-			<h1>ASIDE</h1>
-			<div class="card" style="width: 18rem;">
-			  <img src="..." class="card-img-top" alt="...">
-			  <div class="card-body">
-			    <h5 class="card-title">Card title</h5>
-			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			    <a href="#" class="btn btn-primary">Go somewhere</a>
-			  </div>
+		<aside class="col-3">
+			<div class="container">
+				<h3 class="h3 text-center my-2 border-top border-info">Enlaces</h3>
+				<div class="card border-top border-info" style="width: 18rem;">
+				  <img src="/images/biblioteca-digital.png" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Biblioteca Digital</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Click Aqui</a>
+				  </div>
+				</div>
+				<div class="card border-top border-info my-4" style="width: 18rem;">
+				  <img src="/images/calendario-academico.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Calendario Académico</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Click Aqui</a>
+				  </div>
+				</div>
 			</div>
 		</aside>
 		
@@ -115,8 +125,6 @@
 		</footer>
 	</div>
 	<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
-	<!-- Compiled and minified JavaScript -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 </body>
 
 </html>
