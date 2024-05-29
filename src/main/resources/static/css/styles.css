@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.masinfo{
+	padding: 20px;
+	background-image: url("/images/graduados.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.masinfo{
+	color: white;
+}
