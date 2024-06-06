@@ -11,3 +11,17 @@
 .masinfo{
 	color: white;
 }
+.container{
+		padding: 60px;
+}
+.container h4{
+	color: white;
+	
+}
+.container p{
+	color: #959595;
+}
+.container a{
+	text-decoration: none;
+	color: #959595;
+}
