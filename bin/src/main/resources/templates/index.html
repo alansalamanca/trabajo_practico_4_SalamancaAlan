@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TP4</title>
+	<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="bg-dark">
+				<h1>Facultad de Ingenieria </h1>
+			</div>
+			<section>
+				<div data-th-replace="~{fragments/header::navbar}">
+					
+				</div>
+			</section>
+		 </header>
+	<div class="row">
+		<main class="col-9">
+			<h2 class="h2 text-info my-2">Acerca de:</h2>
+			<p class="p">
+				La Universidad Nacional de Jujuy (UNJ o UNJu) es una universidad pública argentina ubicada en San Salvador de Jujuy, 
+				provincia de Jujuy. Fundada en 1973, cuenta con cuatro facultades y cinco institutos, donde cursan sus carreras 
+				alrededor de 25 000 estudiantes. Hay 40 mil usuarios de alumnos en UNJu Virtual.
+			</p>
+			<div class="masinfo row">
+				<div class="col-6">
+					<h3>CARRERAS DE GRADO</h3>
+					<ol>
+						<li>INGENIERÍA QUIMICA</li>
+						<li>INGENIERÍA DE MINAS</li>
+						<li>INGENIERÍA INDUSTRIAL</li>
+						<li>INGENIERÍA INFORMÁTICA</li>
+					</ol>
+				</div>
+				<div class="col-6">
+					<h3>CARRERAS DE PREGRADO</h3>
+					<ol>
+						<li>ANALISTA PROGRAMADOR UNIVERSITARIO</li>
+						<li>TECNICATURA UNIVERSITARIA EN DISEÑO INTEGRAL DE VIDEOJUEGOS</li>
+						<li>INGENIERÍA INDUSTRIAL</li>
+						<li>TECNICATURA UNIVERSITARIA EN PERFORACIONES</li>
+					</ol>
+					<h3>CONVENIO UNT</h3>
+				</div>
+			</div>
+			<section>
+				<h3 class="">Noticas Recientes</h3>
+				<div id="carouselExampleSlidesOnly" class="carousel slide mx-auto" data-bs-ride="carousel" style="width:500px">
+					  <div class="carousel-inner">
+					    <div class="carousel-item active">
+					      <img src="/images/vacunacion-unju-2024.jpg" class="d-block w-100" alt="...">
+					    </div>
+					    <div class="carousel-item">
+					      <img src="/images/turnos-examen-2.jpg" class="d-block w-100" alt="...">
+					    </div>
+					    <div class="carousel-item">
+					      <img src="/images/vacaciones-invierno-2024.jpg" class="d-block w-100" alt="...">
+					    </div>
+					  </div>
+				</div>
+			</section>
+		</main>
+		<aside class="col-3">
+			<div class="container">
+				<h3 class="h3 text-center my-2 border-top border-info">Enlaces</h3>
+				<div class="card border-top border-info" style="width: 18rem;">
+				  <img src="/images/biblioteca-digital.png" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Biblioteca Digital</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Click Aqui</a>
+				  </div>
+				</div>
+				<div class="card border-top border-info my-4" style="width: 18rem;">
+				  <img src="/images/calendario-academico.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Calendario Académico</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Click Aqui</a>
+				  </div>
+				</div>
+			</div>
+		</aside>
+	</div>
+		<footer>
+			<h1>FOOTER</h1>
+			<div data-th-replace="~{fragments/header::footer}">
+				
+			</div>
+		</footer>
+	</div>
+	<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>
