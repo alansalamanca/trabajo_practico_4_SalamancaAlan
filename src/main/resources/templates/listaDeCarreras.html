@@ -16,6 +16,7 @@
 			      <th scope="col">Nombre</th>
 			      <th scope="col">Cantidad</th>
 			      <th scope="col">Estado</th>
+			      <th scope="col">Edicion</th>
 			    </tr>
 			</thead>
 			<tbody>
@@ -24,6 +25,10 @@
 			      <td data-th-text="${carrera.nombre}"></td>
 			      <td data-th-text="${carrera.cantAnios}"></td>
 			      <td data-th-text="${carrera.estado}"></td>
+			      <td>
+			      	<a data-th-href="@{'/borrarCarrera/'+${carrera.codigo}}" class="btn btn-danger">Borrar</a>
+			      	<a data-th-href="@{'/modificarCarrera/'+${carrera.codigo}}" class="btn btn-warning">Modificar</a>
+			      </td>
 			    </tr>
 			</tbody>  
 		</table>
