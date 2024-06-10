@@ -25,6 +25,7 @@ public class CarreraController {
 		ModelAndView modelView = new ModelAndView("formCarrera");
 		// agrega el objeto
 		modelView.addObject("nuevaCarrera", nuevaCarrera);
+		modelView.addObject("band", false);
 		
 		return modelView;
 	}
@@ -52,6 +53,31 @@ public class CarreraController {
 		modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras());
 				
 		return modelView;
+	}
+	
+	@GetMapping("/modificarCarrera/{codigo}")
+	public ModelAndView editCarrera(@PathVariable(name="codigo") String codigo) {
+		//buscar
+		Carrera carreraParaModificar = ListadoCarreras.buscarCarreraPorCodigo(codigo);
+		
+		//mostrar el nuevo formulario
+		ModelAndView modelView = new ModelAndView("formCarrera");
+		modelView.addObject("nuevaCarrera", carreraParaModificar);	
+		modelView.addObject("band", true);
+		return modelView;		
+	}
+	
+	@PostMapping("/modificarCarrera")
+	public ModelAndView updateCarrera(@ModelAttribute("nuevaCarrera") Carrera carreraModificada) {
+					
+		//guardar
+		ListadoCarreras.modificarCarrera(carreraModificada);
+		
+		//mostrar el listado
+		ModelAndView modelView = new ModelAndView("listaDeCarreras");
+		modelView.addObject("listadoCarreras", ListadoCarreras.listarCarreras());	
+		
+		return modelView;		
 	}
 	
 }
