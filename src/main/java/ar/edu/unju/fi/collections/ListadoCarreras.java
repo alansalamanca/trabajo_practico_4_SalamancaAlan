@@ -11,6 +11,8 @@ public class ListadoCarreras {
 	
 	// Metodo para listar carreras
 	public static List<Carrera> listarCarreras(){
+		// listar solo los que tengas estado true
+		
 		return carreras;
 	}
 	
@@ -26,22 +28,35 @@ public class ListadoCarreras {
 	
 	// Metodo para agregar una carrera 
 	public static void agregarCarrera(Carrera c) {
+		// agregando el estado
+		c.setEstado(true);
+		
 		carreras.add(c);
 	}
 	
-	// Metodo para modificar una carrera 
-	public static void modificarCarrera(Carrera carreraModificada) {
+	  // Método para modificar una carrera
+	  public static void modificarCarrera(Carrera carreraModificada) {
+		  carreraModificada.setEstado(true);
+	    for (int i = 0; i < carreras.size(); i++) {
+	      Carrera carrera = carreras.get(i);
+	      if (carrera.getCodigo().equals(carreraModificada.getCodigo())) {
+	        carreras.set(i, carreraModificada);
+	        break;
+	      }
+	    }
+	  }
+	// Metodo para eliminar una carrera 
+	public static void eliminarCarrera(String codigo) {
+		// borrado fisico
+		//carreras.removeIf(carrera -> carrera.getCodigo().equals(codigo));
 		
+		// borrado logico
 		for (int i = 0; i < carreras.size(); i++) {
 			Carrera carrera = carreras.get(i);
-			if (carrera.getCodigo().equals(carreraModificada.getCodigo())) {
-				carreras.set(i, carreraModificada);
+			if (carrera.getCodigo().equals(codigo)) {
+				carrera.setEstado(false);
 				break;
 			}
 		}
-	}
-	// Metodo para eliminar una carrera 
-	public static void eliminarCarrera(String codigo) {
-		carreras.removeIf(carrera -> carrera.getCodigo().equals(codigo));
 	}
 }
