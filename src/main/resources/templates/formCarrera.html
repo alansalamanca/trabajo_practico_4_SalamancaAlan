@@ -13,7 +13,7 @@
 		<form data-th-object="${nuevaCarrera}" data-th-action="${band}?@{/modificarCarrera}:@{/guardarCarrera}" method="post">
 		  <div class="col-sm-6">
 		    <label for="codigo" class="form-label">Codigo</label>
-		    <input type="text" class="form-control" id="codigo" data-th-field="*{codigo}">
+		    <input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" data-th-readonly="${band}">
 		  </div>
 		  <div class="col-sm-6">
 		    <label for="nombre" class="form-label">Nombre carrera</label>
