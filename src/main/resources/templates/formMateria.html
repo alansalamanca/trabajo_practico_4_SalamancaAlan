@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+<title>FORMULARIO MATERIA</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>FORMULARIO MATERIA</h1>
+		<form data-th-object="${nuevaMateria}" data-th-action="@{/guardarMateria}" method="post">
+			<div class="col-sm-6">
+				<label for="codigo" class="form-label">Codigo</label> 
+				<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}">
+			</div>
+			<div class="col-sm-6">
+				<label for="nombre" class="form-label">Nombre</label>
+				<input type="text" class="form-control" id="nombre" data-th-field="*{nombre}">
+			</div>
+			<div class="col-sm-6">
+				<label for="curso" class="form-label">Curso</label> 
+				<input type="text" class="form-control" id="curso" data-th-field="*{curso}">
+			</div>
+			<div class="col-sm-6">
+				<label for="cantidadHoras" class="form-label">Cantidad Horas</label> 
+				<input type="number" class="form-control" id="cantidadHoras" data-th-field="*{cantidadHoras}">
+			</div>
+			<div class="col-sm-6">
+				<label for="Modalidad" class="form-label">Modalidad</label> 
+				<input type="text" class="form-control" id="Modalidad" data-th-field="*{modalidad}">
+			</div>
+			<div class="col-sm-6">
+				<label for="docente" class="form-label">Docente</label> 
+				<select id="docente" data-th-field="*{docente.legajo}" class="form-control">
+					<option value="">Seleccionar Docente</option>
+					<option data-th-each="d : ${listadoDocentes}" data-th-value="${d.legajo}" data-th-text="${d.apellido}"></option>
+				</select>
+			</div>
+			<div class="col-sm-6">
+				<label for="carrera" class="form-label">Carrera</label> 
+				<input type="text" class="form-control" id="carrera" data-th-field="*{carrera}">
+			</div>
+			<button type="submit" class="btn btn-primary">GuardarCarrera</button>
+		</form>
+	</div>
+
+	<script data-th-src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>
